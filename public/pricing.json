@@ -1,0 +1,39 @@
+[
+    {
+      "title": "Basic Package",
+      "description": "Our Basic Package is a budget-friendly option for couples looking for essential wedding planning services.",
+      "price": "100",
+      "services": [
+        "Venue selection assistance",
+        "Vendor coordination",
+        "Day-of coordination",
+        "Dresses"
+      ]
+    },
+    {
+      "title": "Standard Package",
+      "description": "The Standard Package offers comprehensive wedding planning services at an affordable price.",
+      "price": "200",
+      "services": [
+        "Decor design",
+        "Catering coordination",
+        "Guest management"
+        ,"Event Catering"
+      ]
+    },
+    {
+      "title": "Deluxe Package",
+      "description": "Experience the utmost in luxury with our Deluxe Package, which includes a range of premium services.",
+      "price": "300",
+      "services": [
+        "Customized floral arrangements",
+        "Entertainment selection",
+        "Wedding Jewelry",
+        "VIP guest services",
+        "Photography and videography"
+
+
+      ]
+    }
+  ]
+  

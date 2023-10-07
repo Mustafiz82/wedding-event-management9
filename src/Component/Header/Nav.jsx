@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Nav = () => {
 	const ul = (
-		<div className="flex gap-5">
+		<div className="flex gap-5 font-bold">
 				<NavLink
 					to="/"
 					className={({ isActive, isPending , } ) =>
@@ -38,8 +38,8 @@ const Nav = () => {
 	);
 
 	return (
-		<div>
-			<div className="navbar bg-base-100 px-0">
+		<div className="">
+			<div className="navbar bg-base-100 px-0 ">
 				<div className="navbar-start">
 					<div className="dropdown">
 						<label
