@@ -1,35 +1,39 @@
 import React from "react";
-import {  NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Nav = () => {
 	const ul = (
 		<div className="flex gap-5">
-			<li className="
-            "><NavLink
-				to="/"
-				className={({ isActive, isPending }) =>
-					isPending ? "" : isActive ? "bg-pink text-white" : ""
-				}
-			>
-				Home
-			</NavLink></li>
-			<li><NavLink
-				to="/about"
-				className={({ isActive, isPending }) =>
-					isPending ? "pending" : isActive ? "bg-pink text-white" : ""
-				}
-			>
-				About us
-			</NavLink></li>
-			<li><NavLink
-				to="/Wedding"
-				className={({ isActive, isPending }) =>
-					isPending ? "pending" : isActive ? "bg-pink text-whiteive" : ""
-				}
-			>
-				Wedding
-			</NavLink></li>
-			
+				<NavLink
+					to="/"
+					className={({ isActive, isPending , } ) =>
+						isPending ? "" : isActive ? "text-pink text-white " : ""
+					}
+				>
+					
+					Home
+
+				</NavLink>
+			<li>
+				<NavLink
+					to="/about"
+					className={({ isActive, isPending }) =>
+						isPending ? "pending" : isActive ? "text-pink text-white" : ""
+					}
+				>
+					About us
+				</NavLink>
+			</li>
+			<li>
+				<NavLink
+					to="/Wedding"
+					className={({ isActive, isPending }) =>
+						isPending ? "pending" : isActive ? "text-pink text-whiteive" : ""
+					}
+				>
+					Wedding
+				</NavLink>
+			</li>
 		</div>
 	);
 
@@ -59,18 +63,20 @@ const Nav = () => {
 						</label>
 						<ul
 							tabIndex={0}
-							className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+							className=" menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
 						>
 							{ul}
 						</ul>
 					</div>
-					<a className=" px-0 btn btn-ghost normal-case text-xl font-poppins italic">Wedding Hub</a>
+					<a className=" px-0 btn btn-ghost normal-case text-xl font-poppins italic">
+						Wedding Hub
+					</a>
 				</div>
 				<div className="navbar-center hidden lg:flex">
-					<ul className="menu menu-horizontal px-1">{ul}</ul>
+					<ul className=" menu-horizontal px-1">{ul}</ul>
 				</div>
 				<div className="navbar-end">
-					<a className="btn">Login</a>
+					<a className="btn bg-secondery text-white">Login</a>
 				</div>
 			</div>
 		</div>
