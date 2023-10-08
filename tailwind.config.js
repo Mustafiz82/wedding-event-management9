@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+const withMT = require("@material-tailwind/html/utils/withMT");
+
+export default withMT({
 	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
 
 	theme: {
@@ -15,5 +17,6 @@ export default {
 		},
 		
 	},
-	plugins: [require("daisyui")],
-};
+	plugins: [require("daisyui")]
+})
+
