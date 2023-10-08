@@ -6,6 +6,7 @@ import About from "../Component/About/About";
 import Wedding from "../Pages/Wedding/Wedding";
 import ServiceDetail from "../Pages/ServiceDetail/ServiceDetail";
 import AboutPage from "../Pages/About/AboutPage";
+import Login from "../Pages/Login/Login";
 
 export const router = createBrowserRouter([
     {
@@ -30,6 +31,10 @@ export const router = createBrowserRouter([
             path:"/Services/:id",
             element:<ServiceDetail></ServiceDetail>,
             loader : () => fetch('/public/service.json')
+        },
+        {
+            path:"/login",
+            element:<Login></Login>
         },
       ]
     },

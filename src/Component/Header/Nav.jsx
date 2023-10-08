@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Nav = () => {
 	const ul = (
@@ -76,7 +76,7 @@ const Nav = () => {
 					<ul className=" menu-horizontal px-1">{ul}</ul>
 				</div>
 				<div className="navbar-end">
-					<a className="btn bg-secondery text-white">Login</a>
+					<Link to="/login" className="btn bg-secondery text-white">Login</Link>
 				</div>
 			</div>
 		</div>
