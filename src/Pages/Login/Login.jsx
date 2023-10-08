@@ -1,25 +1,41 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import {
 	Card,
-	Input,
 	Checkbox,
 	Button,
 	Typography,
+	Input,
 } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
-import {FcGoogle} from 'react-icons/fc'
+import { FcGoogle } from "react-icons/fc";
+import { AuthContext } from "../../Context/Context";
+import Swal from "sweetalert2";
+
 
 const Login = () => {
+	const { EmailSignIn } = useContext(AuthContext);
+	const [error, setError] = useState("");
 
 
-    
-    const handleLogin= (e) => {
-        e.preventDefault()
-        const Email = e.target.Email.value
-        const Pass = e.target.Password.value
-        console.log( Email , Pass)
+	const handleLogin = (e) => {
+		e.preventDefault();
+		const Email = e.target.Email.value;
+		const Pass = e.target.Password.value;
+		// console.log( Email , Pass)
 
-    }
+		EmailSignIn(Email, Pass)
+        .then((result) => {
+			const user = result.user;
+			console.log(user);
+			Swal.fire(
+				'Login Completed',
+				'',
+				'success'
+			  )
+		})
+        .catch(error => setError(error.message))
+
+	};
 	return (
 		<div>
 			<div className="hero min-h-screen bg-base-200">
@@ -46,51 +62,44 @@ const Login = () => {
 						>
 							Enter your details to login
 						</Typography>
-						<form onSubmit={handleLogin} className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
+						<form
+							onSubmit={handleLogin}
+							className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96"
+						>
 							<div className="mb-4 flex flex-col gap-6">
-								
 								<Input
 									size="lg"
 									label="Email"
-                                    className=""
-                                    name="Email"
-
+									name="Email"
+									required
 								/>
 								<Input
 									type="password"
 									size="lg"
 									label="Password"
-                                    name="Password"
+									name="Password"
+									required
 								/>
 							</div>
+
 							
-							<div className="flex gap-3 mt-5 ">
-								<input
-									type="checkbox"
-									name="checkbox"
-									id=""
-                                    className="w-5"
-								/>
-								<p className="">
-									I agree the{" "}
-									<span className="font-bold transition-colors hover:text-pink">
-										Terms and Conditions
-									</span>
-								</p>
-							</div>
+							<p className="text-red-500 mt-5">{error}</p>
+
 							<Button
 								className="mt-6 btn bg-pink text-black"
 								fullWidth
-                                type="submit"
+								type="submit"
 							>
 								Login
 							</Button>
-                            <Button
-									className="btn flex gap-2 hover:text-black bg-secondery  text-white mt-2  "
-									fullWidth
-								> <FcGoogle size={25}></FcGoogle>
-									SignIn with Google 
-								</Button>
+							<Button
+								className="btn flex gap-2 hover:text-black bg-secondery  text-white mt-2  "
+								fullWidth
+							>
+								{" "}
+								<FcGoogle size={25}></FcGoogle>
+								SignIn with Google
+							</Button>
 							<Typography
 								color="gray"
 								className="mt-4 text-center font-normal"
