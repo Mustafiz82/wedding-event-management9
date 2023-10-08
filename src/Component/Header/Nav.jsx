@@ -6,8 +6,8 @@ const Nav = () => {
 		<div className="flex gap-5 font-bold">
 				<NavLink
 					to="/"
-					className={({ isActive, isPending , } ) =>
-						isPending ? "" : isActive ? "text-pink text-white " : ""
+					className={({ isActive, isPending }) =>
+						isPending ? "pending" : isActive ? "text-pink " : ""
 					}
 				>
 					
@@ -18,7 +18,7 @@ const Nav = () => {
 				<NavLink
 					to="/about"
 					className={({ isActive, isPending }) =>
-						isPending ? "pending" : isActive ? "text-pink text-white" : ""
+						isPending ? "pending" : isActive ? "text-pink " : ""
 					}
 				>
 					About us
@@ -28,7 +28,7 @@ const Nav = () => {
 				<NavLink
 					to="/Wedding"
 					className={({ isActive, isPending }) =>
-						isPending ? "pending" : isActive ? "text-pink text-whiteive" : ""
+						isPending ? "pending" : isActive ? "text-pink " : ""
 					}
 				>
 					Wedding
