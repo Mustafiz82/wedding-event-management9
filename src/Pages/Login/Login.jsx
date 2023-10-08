@@ -13,7 +13,7 @@ import Swal from "sweetalert2";
 
 
 const Login = () => {
-	const { EmailSignIn } = useContext(AuthContext);
+	const { EmailSignIn ,GoogleSignIn} = useContext(AuthContext);
 	const [error, setError] = useState("");
 
 
@@ -36,6 +36,17 @@ const Login = () => {
         .catch(error => setError(error.message))
 
 	};
+
+	const handleGoogleSignIn = () => {
+		GoogleSignIn()
+		.then(result => {
+			console.log(result.user);
+			Swal.fire("Sign in Successful", "", "success");
+
+		})
+		.catch(error => console.log(error.message))
+
+	}
 	return (
 		<div>
 			<div className="hero min-h-screen bg-base-200">
@@ -92,7 +103,7 @@ const Login = () => {
 							>
 								Login
 							</Button>
-							<Button
+							<Button onClick={handleGoogleSignIn}
 								className="btn flex gap-2 hover:text-black bg-secondery  text-white mt-2  "
 								fullWidth
 							>

@@ -1,19 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../Context/Context";
+import {CgProfile} from "react-icons/cg"
 
 const Nav = () => {
+	const { logOut, user } = useContext(AuthContext);
+
 	const ul = (
 		<div className="flex gap-5 font-bold">
-				<NavLink
-					to="/"
-					className={({ isActive, isPending }) =>
-						isPending ? "pending" : isActive ? "text-pink " : ""
-					}
-				>
-					
-					Home
-
-				</NavLink>
+			<NavLink
+				to="/"
+				className={({ isActive, isPending }) =>
+					isPending ? "pending" : isActive ? "text-pink " : ""
+				}
+			>
+				Home
+			</NavLink>
 			<li>
 				<NavLink
 					to="/about"
@@ -36,6 +38,11 @@ const Nav = () => {
 			</li>
 		</div>
 	);
+	console.log(user);
+
+	const handleLogOut = () => {
+		logOut();
+	};
 
 	return (
 		<div className="">
@@ -76,7 +83,30 @@ const Nav = () => {
 					<ul className=" menu-horizontal px-1">{ul}</ul>
 				</div>
 				<div className="navbar-end">
-					<Link to="/login" className="btn bg-secondery text-white">Login</Link>
+					{!user ? (
+						<Link
+							to="/login"
+							className="btn bg-secondery text-white"
+						>
+							Login
+						</Link>
+					) : (
+						<div className="flex gap-2 items-center">
+							{
+								user.photoURL ? <img className="w-10 h-10 rounded-full"
+								src={user.photoURL }
+								alt="" 
+							/> : <CgProfile size={40}></CgProfile>
+							}
+							<p>{user.displayName}</p>
+							<button
+								className="btn bg-secondery text-white"
+								onClick={handleLogOut}
+							>
+								LOgOUt{" "}
+							</button>
+						</div>
+					)}
 				</div>
 			</div>
 		</div>

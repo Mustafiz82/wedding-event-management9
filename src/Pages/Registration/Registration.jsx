@@ -12,7 +12,7 @@ import { AuthContext } from "../../Context/Context";
 import Swal from "sweetalert2";
 
 const Registration = () => {
-	const { EmailSignUp } = useContext(AuthContext);
+	const { EmailSignUp , GoogleSignIn ,profile} = useContext(AuthContext);
 
 	const [error, setError] = useState("");
 
@@ -21,12 +21,9 @@ const Registration = () => {
 		const Name = e.target.Name.value;
 		const Email = e.target.Email.value;
 		const Pass = e.target.Password.value;
-		// console.log(Name , Email , Pass)
 
 		const patternPass =
-		/^(?=.*[A-Z])(?=.*[!@#$%^&*()_+~\-=/\\{}\[\]|;:'",.<>?`]).{6,}$/
-		;
-
+			/^(?=.*[A-Z])(?=.*[!@#$%^&*()_+~\-=/\\{}\[\]|;:'",.<>?`]).{6,}$/;
 		const isValidPass = patternPass.test(Pass);
 
 		if (!isValidPass) {
@@ -34,26 +31,30 @@ const Registration = () => {
 				"The password must be a minimum of 6 characters in length, include at least one uppercase letter, and have at least one special character. "
 			);
 			return;
+		} else {
+			EmailSignUp(Email, Pass)
+				.then((result) => {
+					const user = result.user;
+					profile(Name)
+					.then()
+					.catch(error => console.log(error))
+					Swal.fire("Registration Completed", "", "success");
+					setError("");
+				})
+				.catch((error) => setError(error.message));
 		}
-		else{
-			
-			
-		EmailSignUp(Email, Pass)
-		.then((result) => {
-			const user = result.user;
-			Swal.fire(
-				'Registration Completed',
-				'',
-				'success'
-			  )
-			setError("")
-		})
-		.catch((error) => setError(error.message));
-			
-		}
-
-			
 	};
+
+	const handleGoogleSignIn = () => {
+		GoogleSignIn()
+		.then(result => {
+			console.log(result.user);
+			Swal.fire("Sign in Successful", "", "success");
+
+		})
+		.catch(error => console.log(error.message))
+
+	}
 
 	return (
 		<div>
@@ -91,7 +92,6 @@ const Registration = () => {
 									label="Name"
 									className=""
 									name="Name"
-									
 								/>
 								<Input
 									size="lg"
@@ -117,7 +117,7 @@ const Registration = () => {
 							>
 								SignUp
 							</Button>
-							<Button
+							<Button onClick={handleGoogleSignIn}
 								className="btn hover:text-black flex gap-2 bg-secondery  text-white mt-2  "
 								fullWidth
 							>
