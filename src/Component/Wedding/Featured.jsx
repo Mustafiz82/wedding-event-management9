@@ -17,7 +17,7 @@ const Featured = () => {
 				</div>
 			</div>
 
-			<div className=" flex gap-5">
+			<div className=" flex flex-col-reverse lg:flex-row gap-5">
 				<div className="grid grid-cols-2 gap-5">
 					<img
 						className="col-span-2 w-full h-full"

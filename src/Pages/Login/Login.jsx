@@ -6,15 +6,19 @@ import {
 	Typography,
 	Input,
 } from "@material-tailwind/react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../../Context/Context";
 import Swal from "sweetalert2";
 
 
 const Login = () => {
-	const { EmailSignIn ,GoogleSignIn} = useContext(AuthContext);
+	const location = useLocation()
+	const { EmailSignIn ,GoogleSignIn } = useContext(AuthContext);
 	const [error, setError] = useState("");
+	const Navigate = useNavigate()
+
+	console.log(location);
 
 
 	const handleLogin = (e) => {
@@ -27,12 +31,14 @@ const Login = () => {
         .then((result) => {
 			const user = result.user;
 			console.log(user);
+			Navigate(location.state || "/")
 			Swal.fire(
 				'Login Completed',
 				'',
 				'success'
-			  )
-		})
+				)
+				
+			})
         .catch(error => setError(error.message))
 
 	};
@@ -42,6 +48,9 @@ const Login = () => {
 		.then(result => {
 			console.log(result.user);
 			Swal.fire("Sign in Successful", "", "success");
+			Navigate(location.state || "/")
+
+			
 
 		})
 		.catch(error => console.log(error.message))
@@ -49,6 +58,8 @@ const Login = () => {
 	}
 	return (
 		<div>
+
+
 			<div className="hero min-h-screen bg-base-200">
 				<div className="hero-content flex-col lg:flex-row justify-around gap-10 ">
 					<div className="text-center lg:text-left w-1/2 ">

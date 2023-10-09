@@ -6,10 +6,10 @@ import { RiAwardFill } from "react-icons/ri";
 
 const WhyUs = () => {
 	return (
-		<div className="my-20">
-			<div className="flex items-center gap-10">
-				<div className="space-y-5 w-1/2 ">
-					<h1 className="text-5xl font-courgette font-bold text-pink">Why Us</h1>
+		<div className="my-10 md:my-20 md:m-5">
+			<div className="flex flex-col md:flex-row items-center gap-10">
+				<div className="space-y-5 p-5 text-justify md:text-left md:w-1/2 ">
+					<h1 className="text-5xl text-center md:text-left font-courgette font-bold text-pink">Why Us</h1>
 					<p>
 						Construction is an ancient humanity activity. It began with the
 						pureley functional need for a controlls environment to moderate the
@@ -28,8 +28,12 @@ const WhyUs = () => {
 						<AiFillCheckCircle className="text-pink " size={25}></AiFillCheckCircle>
 						<p>The Beautiful Moments</p>
 					</div>
+                    
 				</div>
-                <div className="w-1/2 p-10 bg-pink space-y-5 text-xl">
+
+
+                <div className="md:w-1/2 p-10 bg-pink space-y-5 text-xl">
+                    
                     <div className="flex  items-center gap-5">
                         <GiCeremonialMask  className="text-pinkl " size={35}></GiCeremonialMask>
                         <div>

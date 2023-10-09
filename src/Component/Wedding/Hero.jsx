@@ -26,13 +26,14 @@ const Hero = () => {
 				</div>
 			</div>
 
-			<div>
-				<h1>A Wedding</h1>
-				<div className="grid grid-cols-3 gap-5 text-justify">
+			<div className="mt-10">
+				<h1 className="text-center font-courgette text-4xl">A Wedding</h1>
+				<div className="grid p-5 lg:grid-cols-3 gap-5 text-justify">
 					<div className=" space-y-5">
-						<img
+						<img 
 							src={stage}
 							alt=""
+							className="md:w-full lg:w-auto"
 						/>
 						<h1 className="text-2xl font-semibold text-center">
 							wedding Stage
@@ -44,9 +45,11 @@ const Hero = () => {
 						</p>
 					</div>
 					<div className="space-y-5">
-						<img
+						<img 
 							src={dance}
 							alt=""
+							className="md:w-full lg:w-auto"
+
 						/>
 						<h1 className="text-2xl font-semibold text-center">
 							The Dance Stage
@@ -63,6 +66,8 @@ const Hero = () => {
 						<img
 							src={welcome}
 							alt=""
+							className="md:w-full lg:w-auto"
+
 						/>
 						<h1 className="text-2xl font-semibold text-center">
 							Welcome

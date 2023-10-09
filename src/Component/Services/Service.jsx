@@ -5,7 +5,7 @@ const Service = ({item}) => {
     const {id , image , price ,short_description ,title} = item
 	return (
 		<div>
-			<div className="relative  flex w-96 flex-col rounded-xl bg-clip-border text-gray-700 shadow-md ">
+			<div className="relative  flex  flex-col rounded-xl bg-clip-border text-gray-700 shadow-md ">
 				<div className="relative mx-4 mt-4  overflow-hidden rounded-xl  bg-clip-border text-gray-700 shadow-lg">
 					<img
 						src={image}

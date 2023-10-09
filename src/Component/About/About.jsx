@@ -8,9 +8,9 @@ import ceo from "../../assets/founder.jpg";
 const About = () => {
 	return (
 		<div>
-			<div className="flex my-10 gap-16" >
-				<div className="flex w-1/2 justify-between">
-					<div className="flex items-center">
+			<div className="flex flex-col md:flex-row my-10 gap-10 md:gap-10 lg:gap-16" >
+				<div className="flex  md:w-1/2 justify-between">
+					<div className="flex  items-center">
 						<OurService>
 							{ceo}
 							{"Tim Abell"}
@@ -30,10 +30,10 @@ const About = () => {
 						</OurService>
 					</div>
 				</div>
-				<div className="w-1/2 ">
+				<div className="md:w-1/2 text-center px-5 md:text-left">
 					<div className="space-y-5">
 						<h1 className="text-xl font-bold text-secondery">Our Experts</h1>
-						<h1 className="text-7xl font-courgette font-bold ">
+						<h1 className="text-5xl md:text-5xl lg:text-7xl font-courgette font-bold ">
 							Welcome To The Best <span className="text-pink">Day Of</span> Life
 						</h1>
 						<p className="text-justify">

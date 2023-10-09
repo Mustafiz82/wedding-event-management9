@@ -2,15 +2,16 @@ import React from "react";
 import image from "../../assets/perfectWedding.jpg";
 const PerfectWedding = () => {
 	return (
-		<div className="bg-secondery text-white p-16 my-20 ">
-			<div className=" flex gap-16">
-				<div className="w-1/2">
-					<img
+		<div className="bg-secondery text-white p-5 lg:p-16 my-10 lg:my-20 ">
+			<div className=" flex gap-16 flex-col lg:flex-row">
+				<div className="lg:w-1/2  mt-2">
+					<img 
 						src={image}
+						className="w-full"
 						alt=""
 					/>
 				</div>
-				<div className="flex  w-1/2  items-center">
+				<div className="flex  lg:w-1/2  items-center">
 					<div className="space-y-10">
 						<h1 className="text-4xl font-semibold font-courgette ">
 							Let's Plan Your Perfect Wedding
@@ -22,7 +23,7 @@ const PerfectWedding = () => {
 							are handwritten. A handwritten note is personal and rare. Due to
 							this, it will be given more attention.
 						</p>
-						<p>
+						<p className="pb-5">
 							A few weeks ago I was in Michigan for my dad’s funeral. While
 							there I attended my mom’s church on Sunday and met her pastor for
 							the second time.

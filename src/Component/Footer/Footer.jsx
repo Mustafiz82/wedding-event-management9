@@ -10,8 +10,8 @@ import { MdLocationOn } from "react-icons/md";
 const Footer = () => {
 	return (
 		<div className="mt-10">
-			<footer className="flex  justify-between p-10 bg-neutral text-neutral-content  text-xl">
-				<nav className="w-1/3 space-y-10">
+			<footer className="flex flex-col md:flex-row gap-10 md:gap-0 justify-between p-10 bg-neutral text-neutral-content  text-xl">
+				<nav className="md:w-1/3 space-y-10">
 					<h1 className="font-courgette text-3xl">Wedding Hut</h1>
 					<p className="my-12">
 						Welcome and open yourself to your truest love this year with us!
@@ -32,9 +32,10 @@ const Footer = () => {
 						></FaInstagram>
 					</div>
 				</nav>
-				<nav className="w-1/3 flex justify-center  ">
-					<div className="space-y-5">
+				<nav className="md:w-1/3 flex  justify-center  ">
+					<div className="space-y-5 ">
 						<h1 className="text-2xl font-semibold">Information</h1>
+						<div className="md:space-y-5 grid md:block grid-cols-4 gap-5">
 						<li className="list-none">
 							<a href="#">Home</a>
 						</li>
@@ -50,9 +51,10 @@ const Footer = () => {
 						<li className="list-none">
 							<a href="#">Contact</a>
 						</li>
+						</div>
 					</div>
 				</nav>
-				<nav className="w-1/3 flex justify-end">
+				<nav className="md:w-1/3 flex justify-end">
 					<div className="space-y-5 ">
 						<h3 className="text-2xl font-semibold">Contact Us</h3>
 						<p>Would you have any enquiries.Please feel free to contuct us</p>
