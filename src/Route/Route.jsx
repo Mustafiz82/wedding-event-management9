@@ -39,7 +39,7 @@
                 element:<Login></Login>
             },
             {
-                path:"/Register",
+                path:"/Registration",
                 element:<Registration></Registration>
             },
         ]

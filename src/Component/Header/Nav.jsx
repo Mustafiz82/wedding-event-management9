@@ -38,6 +38,16 @@ const Nav = () => {
 					Wedding
 				</NavLink>
 			</li>
+			<li>
+				<NavLink
+					to="/Registration"
+					className={({ isActive, isPending }) =>
+						isPending ? "pending" : isActive ? "text-pink " : ""
+					}
+				>
+					Registration
+				</NavLink>
+			</li>
 			</>
 	);
 
