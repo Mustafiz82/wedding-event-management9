@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Price = ({ item }) => {
+
+	useEffect(() =>{
+		Aos.init();
+		Aos.refresh()
+	},[])
     const {services ,price , description , title } = item
 	return (
-		<div>
+		<div data-aos="fade-up">
 			<div className="relative flex w-full  flex-col rounded-xl bg-gradient-to-tr from-pink-600 to-pink-400 bg-clip-border p-8  shadow-md shadow-pink-500/40">
 				<div className="relative space-y-5 m-0 mb-8 overflow-hidden rounded-none border-b border-white/10 bg-transparent bg-clip-border pb-8 text-center text-gray-700 shadow-none">
 					<p className="block font-sans text-xl font-bold font-normal uppercase leading-normal  antialiased text-pink">

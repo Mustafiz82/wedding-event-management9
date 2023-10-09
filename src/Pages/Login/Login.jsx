@@ -18,7 +18,6 @@ const Login = () => {
 	const [error, setError] = useState("");
 	const Navigate = useNavigate()
 
-	console.log(location);
 
 
 	const handleLogin = (e) => {
@@ -89,16 +88,18 @@ const Login = () => {
 							className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96"
 						>
 							<div className="mb-4 flex flex-col gap-6">
-								<Input
+								<input
+								className="w-full h-10 p-4 border-2"
+									placeholder="Name"
 									size="lg"
-									label="Email"
 									name="Email"
 									required
 								/>
-								<Input
+								<input
+								className="w-full h-10 p-4 border-2" 
+								placeholder="password"
 									type="password"
 									size="lg"
-									label="Password"
 									name="Password"
 									required
 								/>

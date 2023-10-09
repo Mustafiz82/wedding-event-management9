@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Service = ({item}) => {
+
+	useEffect(() =>{
+		Aos.init();
+		Aos.refresh()
+	},[])
     const {id , image , price ,short_description ,title} = item
 	return (
 		<div>
-			<div className="relative  flex  flex-col rounded-xl bg-clip-border text-gray-700 shadow-md ">
+			<div data-aos="flip-right" className="relative  flex  flex-col rounded-xl bg-clip-border text-gray-700 shadow-md ">
 				<div className="relative mx-4 mt-4  overflow-hidden rounded-xl  bg-clip-border text-gray-700 shadow-lg">
 					<img
 						src={image}

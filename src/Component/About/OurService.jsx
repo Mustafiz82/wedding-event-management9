@@ -1,9 +1,7 @@
 import React from "react";
 
 const OurService = ({children} ) => {
-    console.log(children);
-    const [image , Name , Title] = children
-    console.log(children[2]);
+    const [image] = children
 	return (
 		<div>
 			<div class="relative      flex flex-col rounded-xl bg-white  text-gray-700 shadow-md">

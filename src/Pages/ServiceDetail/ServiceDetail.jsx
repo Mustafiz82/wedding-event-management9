@@ -3,7 +3,6 @@ import { useLoaderData, useParams } from 'react-router-dom';
 
 const ServiceDetail = () => {
     const loader = useLoaderData()
-    const [isLoading , setLoading] = useState(true)
 
     const {id} = useParams()
     // console.log(params);

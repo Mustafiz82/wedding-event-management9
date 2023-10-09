@@ -12,7 +12,7 @@ import { AuthContext } from "../../Context/Context";
 import Swal from "sweetalert2";
 
 const Registration = () => {
-	const { EmailSignUp , GoogleSignIn ,profile} = useContext(AuthContext);
+	const { EmailSignUp, GoogleSignIn, profile } = useContext(AuthContext);
 
 	const [error, setError] = useState("");
 
@@ -36,8 +36,8 @@ const Registration = () => {
 				.then((result) => {
 					const user = result.user;
 					profile(Name)
-					.then()
-					.catch(error => console.log(error))
+						.then()
+						.catch((error) => console.log(error));
 					Swal.fire("Registration Completed", "", "success");
 					setError("");
 				})
@@ -47,14 +47,12 @@ const Registration = () => {
 
 	const handleGoogleSignIn = () => {
 		GoogleSignIn()
-		.then(result => {
-			console.log(result.user);
-			Swal.fire("Sign in Successful", "", "success");
-
-		})
-		.catch(error => console.log(error.message))
-
-	}
+			.then((result) => {
+				console.log(result.user);
+				Swal.fire("Sign in Successful", "", "success");
+			})
+			.catch((error) => console.log(error.message));
+	};
 
 	return (
 		<div>
@@ -87,24 +85,28 @@ const Registration = () => {
 							className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96"
 						>
 							<div className="mb-4 flex flex-col gap-6">
-								<Input
+								<input
+									className="w-full h-10 p-4 border-2"
 									size="lg"
 									label="Name"
-									className=""
 									name="Name"
+									placeholder="Name"
 								/>
-								<Input
+								<input
+									className="w-full h-10 p-4 border-2"
 									size="lg"
 									label="Email"
-									className=""
 									name="Email"
 									required
+									placeholder="Email"
 								/>
-								<Input
+								<input
+									className="w-full h-10 p-4 border-2"
 									type="password"
 									size="lg"
 									label="Password"
 									name="Password"
+									placeholder="Password"
 									required
 								/>
 							</div>
@@ -117,7 +119,8 @@ const Registration = () => {
 							>
 								SignUp
 							</Button>
-							<Button onClick={handleGoogleSignIn}
+							<Button
+								onClick={handleGoogleSignIn}
 								className="btn hover:text-black flex gap-2 bg-secondery  text-white mt-2  "
 								fullWidth
 							>

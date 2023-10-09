@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import image from "../../assets/perfectWedding.jpg";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const PerfectWedding = () => {
+
+	
+	useEffect(() => {
+		AOS.init();
+		AOS.refresh();
+	  }, []);
 	return (
-		<div className="bg-secondery text-white p-5 lg:p-16 my-10 lg:my-20 ">
+		<div data-aos="fade-up" className="bg-secondery text-white p-5 lg:p-16 my-10 lg:my-20 ">
 			<div className=" flex gap-16 flex-col lg:flex-row">
 				<div className="lg:w-1/2  mt-2">
 					<img 

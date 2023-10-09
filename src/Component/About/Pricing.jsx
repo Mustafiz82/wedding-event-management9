@@ -15,7 +15,7 @@ const Pricing = () => {
             <h1  className='text-7xl font-courgette font-bold text-center'> Our <span className='text-pink'>Pricing plan</span></h1>
             <div className='grid  md:grid-cols-3 gap-5 lg:grid-cols-3 mt-10 place-content-center' > 
             {
-                loader.map(item => <Price item={item}></Price>)
+                loader?.map(item => <Price item={item}></Price>)
             }
         </div>
         </div>

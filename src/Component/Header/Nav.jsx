@@ -40,7 +40,6 @@ const Nav = () => {
 			</li>
 			</>
 	);
-	console.log(user);
 
 	const handleLogOut = () => {
 		logOut();

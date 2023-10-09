@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { AiFillCheckCircle } from "react-icons/ai";
 import { GiCeremonialMask } from "react-icons/gi";
 import { FaGlassMartiniAlt } from "react-icons/fa";
 import { RiAwardFill } from "react-icons/ri";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const WhyUs = () => {
+
+    useEffect(() =>{
+        Aos.init();
+		Aos.refresh()
+    },[])
+
 	return (
 		<div className="my-10 md:my-20 md:m-5">
 			<div className="flex flex-col md:flex-row items-center gap-10">
-				<div className="space-y-5 p-5 text-justify md:text-left md:w-1/2 ">
+				<div data-aos="zoom-in-up" className="space-y-5 p-5 text-justify md:text-left md:w-1/2 ">
 					<h1 className="text-5xl text-center md:text-left font-courgette font-bold text-pink">Why Us</h1>
 					<p>
 						Construction is an ancient humanity activity. It began with the
@@ -32,7 +40,7 @@ const WhyUs = () => {
 				</div>
 
 
-                <div className="md:w-1/2 p-10 bg-pink space-y-5 text-xl">
+                <div data-aos="zoom-in-up" className="md:w-1/2 p-10 bg-pink space-y-5 text-xl">
                     
                     <div className="flex  items-center gap-5">
                         <GiCeremonialMask  className="text-pinkl " size={35}></GiCeremonialMask>
