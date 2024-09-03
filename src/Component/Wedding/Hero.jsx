@@ -1,12 +1,12 @@
 import React from "react";
-import banner from "../../assets/weddingBanner.jpg";
-import stage from "../../assets/stagex.jpg";
+import banner from "../../assets/weddingBanner.webp";
+import stage from "../../assets/stagex.webp";
 import dance from "../../assets/Danse.jpg";
 import welcome from "../../assets/Welcome.jpg";
 
 const Hero = () => {
 	return (
-		<div>
+		<div className="">
 			<div
 				className="hero min-h-screen"
 				style={{
@@ -16,7 +16,7 @@ const Hero = () => {
 				<div className="hero-overlay bg-opacity-60"></div>
 				<div className="hero-content text-center text-neutral-content">
 					<div className="max-w-md">
-						<h1 className="mb-5 text-5xl font-bold font-courgette">
+						<h1 className="mb-5 2xl:text-6xl text-5xl font-bold font-courgette">
 							Weddding Hut
 						</h1>
 						<p className="mb-5 font-courgette">
@@ -27,9 +27,8 @@ const Hero = () => {
 			</div>
 
 			<div className="mt-10">
-				<h1 className="text-center font-courgette text-4xl">A Wedding</h1>
-				<div className="grid p-5 lg:grid-cols-3 gap-5 text-justify">
-					<div className=" space-y-5">
+				<div className="grid p-5 lg:grid-cols-3 gap-5   text-justify">
+					<div className=" space-y-5 shadow-xl p-5">
 						<img 
 							src={stage}
 							alt=""
@@ -44,7 +43,7 @@ const Hero = () => {
 							FLOWERS. WEDDING STAGE WITH ARTIFICIAL CANDLES AND FLOWERS.
 						</p>
 					</div>
-					<div className="space-y-5">
+					<div className="space-y-5 shadow-xl p-5">
 						<img 
 							src={dance}
 							alt=""
@@ -62,7 +61,7 @@ const Hero = () => {
 							TO DANCE AT A TIME
 						</p>
 					</div>
-					<div className="space-y-5">
+					<div className="space-y-5 shadow-xl p-5">
 						<img
 							src={welcome}
 							alt=""

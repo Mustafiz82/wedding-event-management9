@@ -1,7 +1,7 @@
 import React from "react";
 
-import grid1 from "../../assets/grid-1.jpg";
-import grid2 from "../../assets/grid-2.jpg";
+import grid1 from "../../assets/grid-1.webp";
+import grid2 from "../../assets/grid-2.webp";
 import grid3 from "../../assets/grid-3.jpg";
 import grid4 from "../../assets/grid-4.jpg";
 import grid5 from "../../assets/grid-5.jpg";
@@ -9,10 +9,10 @@ import bannarImg from "../../assets/dsc-8584@2x.webp";
 
 const Featured = () => {
 	return (
-		<div>
+		<div className="px-5">
 			<div className="my-20 text-center space-y-4 ">
 				<h1 className="text-5xl font-bold font-courgette text-pink">OUR WEDDING FEATURED</h1>
-				<p className="text-2xl">weddin Portfolio</p>
+				<p className="text-2xl">wedding Portfolio</p>
 				<div className="w-60 bg-pink h-1 mx-auto">
 				</div>
 			</div>

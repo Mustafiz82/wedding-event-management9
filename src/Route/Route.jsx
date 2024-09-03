@@ -23,15 +23,15 @@
             },
             {
                 path:"/about",
-                element:<PrivateRoute><AboutPage></AboutPage></PrivateRoute>
+                element:<AboutPage></AboutPage>
             },
             {
                 path:"/Wedding",
-                element:<PrivateRoute><Wedding></Wedding></PrivateRoute>
+                element:<Wedding></Wedding>
             },
             {
                 path:"/Services/:id",
-                element:<PrivateRoute><ServiceDetail></ServiceDetail></PrivateRoute>,
+                element:<ServiceDetail></ServiceDetail>,
                 loader : () => fetch('/service.json')
             },
             {

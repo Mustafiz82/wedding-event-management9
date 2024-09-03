@@ -1,6 +1,6 @@
 import React from "react";
 
-const OurService = ({children} ) => {
+const ExpertMember = ({children} ) => {
     const [image] = children
 	return (
 		<div>
@@ -8,7 +8,7 @@ const OurService = ({children} ) => {
 				<div class="relative mx-4 mt-4 overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
 					<img
 						src={image} 
-                        className="w-60"
+                        className="w-40 2xl:w-60"
 						alt="profile-picture"
 					/>
 				</div>
@@ -25,4 +25,4 @@ const OurService = ({children} ) => {
 	);
 };
 
-export default OurService;
+export default ExpertMember;

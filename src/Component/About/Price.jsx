@@ -13,10 +13,10 @@ const Price = ({ item }) => {
 		<div data-aos="fade-up">
 			<div className="relative flex w-full  flex-col rounded-xl bg-gradient-to-tr from-pink-600 to-pink-400 bg-clip-border p-8  shadow-md shadow-pink-500/40">
 				<div className="relative space-y-5 m-0 mb-8 overflow-hidden rounded-none border-b border-white/10 bg-transparent bg-clip-border pb-8 text-center text-gray-700 shadow-none">
-					<p className="block font-sans text-xl font-bold font-normal uppercase leading-normal  antialiased text-pink">
+					<p className="block font-sans 2xl:text-2xl text-xl font-normal uppercase leading-normal  antialiased text-pink">
 						{title}
 					</p>
-					<p className="block font-sans text-sm font-normal uppercase leading-normal  antialiased">
+					<p className="block font-sans 2xl:text-normal text-sm font-normal uppercase leading-normal  antialiased">
 						{description}
 					</p>
 					<h1 className="mt-6 flex justify-center gap-1 font-sans text-7xl font-normal tracking-normal  antialiased">

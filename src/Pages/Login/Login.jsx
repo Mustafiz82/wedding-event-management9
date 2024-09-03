@@ -17,6 +17,7 @@ const Login = () => {
 	const { EmailSignIn ,GoogleSignIn } = useContext(AuthContext);
 	const [error, setError] = useState("");
 	const Navigate = useNavigate()
+	const isUltraLargeScreen = window.innerWidth > 1536;
 
 
 
@@ -60,10 +61,10 @@ const Login = () => {
 
 
 			<div className="hero min-h-screen bg-base-200">
-				<div className="hero-content flex-col lg:flex-row justify-around gap-10 ">
+				<div className="hero-content flex-col lg:flex-row justify-around 2xl:gap-32 gap-10 ">
 					<div className="text-center lg:text-left w-1/2 ">
-						<h1 className="text-5xl font-bold font-courgette">Login now!</h1>
-						<p className="py-6">
+						<h1 className="2xl:text-7xl text-5xl font-bold font-courgette">Login now!</h1>
+						<p className="py-6 2xl:text-xl">
 							Access Service detail view wedding and About us Page
 						</p>
 					</div>
@@ -72,20 +73,21 @@ const Login = () => {
 						shadow={false}
 					>
 						<Typography
-							variant="h4"
+							variant={isUltraLargeScreen ? "h2" : "h4"}
 							color="blue-gray"
 						>
 							Login
 						</Typography>
 						<Typography
+
 							color="gray"
-							className="mt-1 font-normal"
+							className="mt-1 2xl:text-xl font-normal"
 						>
 							Enter your details to login
 						</Typography>
 						<form
 							onSubmit={handleLogin}
-							className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96"
+							className="mt-8 mb-2 w-80 max-w-screen-lg 2xl:max-w-screen-2xl sm:w-96"
 						>
 							<div className="mb-4 flex flex-col gap-6">
 								<input
@@ -129,7 +131,7 @@ const Login = () => {
 							>
 								Didn't have an account?{" "}
 								<Link
-									to="/Register"
+									to="/Registration"
 									className="font-medium text-gray-900"
 								>
 									Sign Up

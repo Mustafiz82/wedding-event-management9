@@ -57,10 +57,10 @@ const Registration = () => {
 	return (
 		<div>
 			<div className="hero min-h-screen bg-base-200">
-				<div className="hero-content flex-col lg:flex-row justify-around gap-10 ">
+				<div className="hero-content flex-col lg:flex-row justify-around 2xl:gap-20 gap-10 ">
 					<div className="text-center lg:text-left w-1/2 ">
-						<h1 className="text-5xl font-bold font-courgette">SignUp Now!</h1>
-						<p className="py-6">
+						<h1 className="text-5xl 2xl:text-7xl font-bold font-courgette">SignUp Now!</h1>
+						<p className="py-6 2xl:text-xl">
 							Access Service detail view wedding and About us Page
 						</p>
 					</div>
@@ -69,14 +69,14 @@ const Registration = () => {
 						shadow={false}
 					>
 						<Typography
-							variant="h4"
+							className="text-xl 2xl:text-3xl font-semibold"
 							color="blue-gray"
 						>
 							SignUp
 						</Typography>
 						<Typography
 							color="gray"
-							className="mt-1 font-normal"
+							className="mt-1 2xl:text-xl font-normal"
 						>
 							Enter your details to Register
 						</Typography>
