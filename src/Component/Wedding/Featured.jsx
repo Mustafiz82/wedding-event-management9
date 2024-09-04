@@ -2,9 +2,9 @@ import React from "react";
 
 import grid1 from "../../assets/grid-1.webp";
 import grid2 from "../../assets/grid-2.webp";
-import grid3 from "../../assets/grid-3.jpg";
-import grid4 from "../../assets/grid-4.jpg";
-import grid5 from "../../assets/grid-5.jpg";
+import grid3 from "../../assets/grid-3.webp";
+import grid4 from "../../assets/grid-4.webp";
+import grid5 from "../../assets/grid-5.webp";
 import bannarImg from "../../assets/dsc-8584@2x.webp";
 
 const Featured = () => {

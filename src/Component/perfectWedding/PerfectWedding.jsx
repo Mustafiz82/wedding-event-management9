@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import image from "../../assets/perfectWedding.jpg";
+import image from "../../assets/perfectWedding.webp";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Parallax } from 'react-parallax';
@@ -18,7 +18,7 @@ const PerfectWedding = () => {
 					<Parallax bgImage={image} strength={-150}>
 						<div className="h-[600px] w-full "></div>
 					</Parallax>
-						
+
 				</div>
 				<div className="flex  lg:w-1/2  items-center">
 					<div className="space-y-10 2xl:text-xl">

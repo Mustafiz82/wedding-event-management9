@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 
-import planner from "../../assets/planner.jpg";
-import planner2 from "../../assets/planner2.jpg";
-import ceo from "../../assets/founder.jpg";
+import planner from "../../assets/planner.webp";
+import planner2 from "../../assets/planner2.webp";
+import ceo from "../../assets/founder.webp";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import ExpertMember from "./ExpertMember";

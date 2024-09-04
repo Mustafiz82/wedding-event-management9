@@ -1,8 +1,8 @@
 import React from "react";
 import banner from "../../assets/weddingBanner.webp";
 import stage from "../../assets/stagex.webp";
-import dance from "../../assets/Danse.jpg";
-import welcome from "../../assets/Welcome.jpg";
+import dance from "../../assets/Danse.webp";
+import welcome from "../../assets/Welcome.webp";
 
 const Hero = () => {
 	return (
