@@ -2,23 +2,23 @@ import React, { useEffect } from "react";
 import image from "../../assets/perfectWedding.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import { Parallax } from 'react-parallax';
 const PerfectWedding = () => {
 
-	
+
 	useEffect(() => {
 		AOS.init();
 		AOS.refresh();
-	  }, []);
+	}, []);
 	return (
 		<div data-aos="fade-up" className="bg-secondery  text-white p-5 lg:p-16 my-10 lg:my-20 ">
 			<div className=" flex gap-16 flex-col lg:flex-row">
 				<div className="lg:w-1/2  mt-2">
-					<img 
-						src={image}
-						className="w-full"
-						alt=""
-					/>
+					
+					<Parallax bgImage={image} strength={-150}>
+						<div className="h-[600px] w-full "></div>
+					</Parallax>
+						
 				</div>
 				<div className="flex  lg:w-1/2  items-center">
 					<div className="space-y-10 2xl:text-xl">
