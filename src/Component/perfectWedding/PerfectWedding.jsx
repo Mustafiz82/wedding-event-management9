@@ -13,10 +13,10 @@ const PerfectWedding = () => {
 	return (
 		<div data-aos="fade-up" className="bg-secondery  text-white p-5 lg:p-16 my-10 lg:my-20 ">
 			<div className=" flex gap-16 flex-col lg:flex-row">
-				<div className="lg:w-1/2  mt-2">
+				<div className="lg:w-1/2  mt-10  lg:mt-2">
 					
-					<Parallax bgImage={image} strength={-150}>
-						<div className="h-[600px] w-full "></div>
+					<Parallax bgImage={image} className="" strength={-150}>
+						<div className="h-[250px] lg:h-[400px] 2xl:h-[600px] w-full "></div>
 					</Parallax>
 
 				</div>
